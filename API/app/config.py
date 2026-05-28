@@ -20,7 +20,7 @@ class Settings:
     DEBUG: bool = ENV != "production"
 
     # Database - Private attributes for sensitive data
-    __DB_HOST: str = os.getenv("DB_HOST", "10.15.3.150")
+    __DB_HOST: str = os.getenv("DB_HOST", "localhost")
     __DB_USER: str = os.getenv("DB_USER", "root")
     __DB_PASS: str = os.getenv("DB_PASS", "")
     __DB_NAME: str = os.getenv("DB_NAME", "esport_social")
@@ -34,8 +34,8 @@ class Settings:
 
     # CORS
     CORS_ORIGINS: list = [
-        "http://10.15.3.150:5173",
-        "http://10.15.3.150:3000",
+        "http://localhost:5173",
+        "http://localhost:3000",
     ]
 
     # API
